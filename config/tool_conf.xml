@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='utf-8'?>
+<toolbox monitor="true">
+  <section id="getext" name="Get Data">
+    <tool file="data_source/upload.xml" />
+    <tool file="data_source/gigwa.xml" />
+    <tool file="data_source/appgcc.xml" />
+  </section>
+  <section id="snp_data_tools" name="RiceGalaxy: SNP Data Tools">
+    <tool file="snpdatatools/fgsea_rice.xml" />
+    <tool file="snpdatatools/findGeneGrep4.xml" />
+    <tool file="snpdatatools/findseq2.xml" />
+    <tool file="snpdatatools/getContigName2.xml" />
+    <!--<tool file="snpdatatools/getGenes3.xml" /> -->
+    <tool file="snpdatatools/getGenes5.xml" />
+    <tool file="snpdatatools/getSubsequence2.xml" />
+    <tool file="snpdatatools/liftregionover.xml" />
+    <tool file="snpdatatools/parseBlat2.xml" />
+  </section>
+  <section id="GEMMA" name="RiceGalaxy: GEMMA">
+  	<tool file="gemma/plink-make-bed.xml"/>
+	<tool file="gemma/makePCA2.xml"/> 
+	<tool file="gemma/compute_kinship.xml"/>
+	<tool file="gemma/add_pheno_to_fam.xml"/>
+	<tool file="gemma/gemma-assoc-lm.xml"/> 
+	<tool file="gemma/gemma-assoc-lmm.xml"/> 
+	<tool file="gemma/gwas-plots.xml"/>   
+  </section>
+  <section id="diseaseTools" name="RiceGalaxy: Pathology and Disease Tools">
+  	<tool file="pathologyTools/PathoIdent.xml"/>
+  </section>
+
+  <section id="plink" name="Plink Data Tools">  
+	<tool file="plink/plink-filter.xml"/> 
+	<tool file="plink/plink-prune.xml"/>   
+	<tool file="plink/plink-clump.xml"/>  
+	<tool file="plink/plink-clump2.xml"/>    
+	<tool file="plink/plink-compute-distance.xml"/>    
+	<tool file="plink/plink-compute-freq.xml"/>    
+	<tool file="plink/plink-filter-pbed.xml"/> 
+	<tool file="plink/plink-prune-pbed.xml"/>   
+ </section>  
+  <section id="gea-r" name="GEA-R Tools">  
+	<tool file="GEA-R/AMMI/asreg.xml"/> 
+	<tool file="GEA-R/FRegression/fr.xml"/> 
+	<tool file="GEA-R/PLS/pls.xml"/> 
+	<tool file="GEA-R/Stability/stab.xml"/> 
+ </section>  
+  <section id="genomic_selection" name="EIB: Genomic Selection">
+<!--   <tool file="BGLR_Galaxy/bglr_encode.xml"/>
+   <tool file="BGLR_Galaxy/bglr_validate.xml"/>
+   <tool file="BGLR_Galaxy/bglr.xml"/> 
+   <tool file="BGLR_Galaxy/bglr_samplematching.xml"/>  -->
+   <!--<tool file="genomic_selection_tools/blup_calculator_tool/blupcal.xml" />
+   <tool file="genomic_selection_tools/blup_calculator_tool/versions/blup_calculator_tool/blupcal.xml" />
+-->
+    <tool file="genomic_selection_tools/blup_calculator_tool/versions/blup_calculator_tool/blupcal.xml" />
+    <tool file="genomic_selection_tools/gobii_hmp_filtering_tool/gbs-hmp-filter.xml" />
+    <tool file="genomic_selection_tools/encode_tool/bglr_encode_v3.xml" />
+  <!--  <tool file="genomic_selection_tools/validate_tool/sample_matching.xml" />-->
+    <tool file="genomic_selection_tools/validate_tool/sample_matching2/sample_matching.xml" />
+    <tool file="genomic_selection_tools/parallel_validate_tool/parallel_sample_matching.xml" />
+    <tool file="genomic_selection_tools/parallel_validate_tool/parallel_sample_matching2.xml" />
+    <tool file="genomic_selection_tools/gebv_prediction_tool/gebv_prediction.xml" />
+    <tool file="genomic_selection_tools/cross_validation_tool/cross_validation.xml" />
+    <tool file="genomic_selection_tools/gebv_prediction_tool/cross_validation_model_training.xml" />
+    <!--<tool file="genomic_selection_tools/gebv_prediction_tool/PrepareCrossValidation/PrepareCrossValidation.xml" />-->
+    <tool file="genomic_selection_tools/gebv_prediction_tool/PrepareCrossValidation/SplitDatasetsByGroupingFactor.xml" />
+    <tool file="genomic_selection_tools/gebv_prediction_tool/SummarizeModelTraining/SummarizeModelTraining.xml" />
+  </section>
+  <section id="data_format_conversion" name="Data Format Conversion">
+    <tool file="plink/plink-composite2bed.xml" />
+    <tool file="plink_conversion/binary2ped.xml" />
+    <tool file="plink/plink-binary2vcf.xml" />
+    <tool file="tassel_conversion/hapmap2plink.xml" />
+    <tool file="tassel_conversion/hapmap2vcf.xml" />
+    <tool file="tassel/flapjack2vcf.xml" />
+    <tool file="genomic_selection_tools/convert_formats/ConvertGenotypingFormats/ConvertGenotypingFormats.xml" />
+    <tool file="genomic_selection_tools/convert_formats/ConvertPhenotypingFileForGEBV/ConvertPhenotypingFileForGEBV.xml" />
+    <tool file="genomic_selection_tools/convert_formats/ConvertPhenotypingFileForGEBV1/ConvertPhenotypingFileForGEBV1.xml" />
+    <tool file="genomic_selection_tools/convert_formats/ConvertGEBVoutput/ConvertGEBVoutput.xml" />
+    <tool file="genomic_selection_tools/convert_formats/GenerateMembershipFile.xml" />
+    <tool file="genomic_selection_tools/convert_formats/CreateGroupingFile.xml" />
+  </section>
+  <section id="bcftools" name="BCFTools">
+    <tool file="bcftools/bcftools-stats.xml" />
+    <tool file="bcftools/bcftools-filter.xml" />
+    <tool file="bcftools/bcftools-convert.xml" />
+    <tool file="bcftools/bcftools-create-variandid.xml" />
+    <tool file="bcftools/bcftools-qc-annotations.xml" />
+  </section>
+  <section id="marker_selection" name="Marker Selection">
+    <tool file="hackathon_problem3/sampleSNPs/sampleSNPs.xml" />
+    <tool file="hackathon_problem3/sampleLD/sampleLD.xml" />
+    <tool file="hackathon_problem3/purity/purity.xml" />
+    <tool file="hackathon_problem3/purity/purity_beta.xml" />
+    <tool file="hackathon_problem3/plink_ld_prune/plink_ld_prune.xml" />
+    <tool file="hackathon_problem3/plink_vcf2bed/plink_vcf2bed.xml" />
+  </section> 
+  <section id="imputation" name="Imputation">
+    <tool file="genomic_selection_tools/naive_imputation_tool/naive_impute.xml" />
+    <tool file="problem2_tools/beagle_tool/beagle.xml" />
+    <tool file="problem2_tools/impute_tool/impute.xml" />
+    <!-- <tool file="problem2_tools/hapmap_to_vcf_tool/hapmap_to_vcf.xml" /> -->
+    <!-- <tool file="problem2_tools/vcf_to_hapmap_tool/vcf_to_hapmap.xml" /> -->
+    <tool file="problem2_tools/makeNPUTEinput/makeNPUTEinput.xml" />
+    <tool file="problem2_tools/npute/NPUTE.xml" />
+    <tool file="problem2_tools/makeHMPfromNPUTEoutput/makeHMPfromNPUTEoutput.xml"/>
+    <tool file="problem2_tools/validation/imputeValidation.xml"/>
+    <tool file="problem2_tools/simulate_missing/set_random_missing.xml" />
+  </section>
+  <section id="oghma" name="OGHMA">
+    <tool file="oghma/encode.xml" />
+    <tool file="oghma/folds.xml" />
+    <tool file="oghma/lasso.xml" />
+    <tool file="oghma/svm.xml" />
+    <tool file="oghma/randomForest.xml" />
+    <tool file="oghma/computeR2.xml" />
+    <tool file="oghma/evaluation.xml" />
+    <tool file="oghma/prediction.xml" />
+    <tool file="oghma/plotPrediction.xml" />
+  </section>
+  
+  <section id="cluster_analysis" name="Cluster Analysis">
+    <tool file="tassel5/calcDistanceMatrix.xml"/>
+    <tool file="genomic_selection_tools/snprelate/snprelate_tool/snprelate.xml" />
+    <tool file="cluster_analysis/getDistR.xml"/>
+    <tool file="cluster_analysis/plink_pca.xml"/>
+    <tool file="cluster_analysis/hkmeans/clone/hkmeans_clustering/hkmeans_clustering.xml"/>
+    <tool file="cluster_analysis/kmeans_clustering.xml"/>
+  </section> 
+  <section id="gwas" name="TASSEL: GWAS tools">
+   <tool file="tassel5/sortGenotypeData.xml"/>
+   <tool file="tassel5/calculateKinship.xml" />
+   <tool file="tassel5/calculatePCA.xml" />
+   <tool file="tassel5/runGLM.xml"/>
+   <tool file="tassel5/runMLM.xml"/>
+  </section>
+
+  <section id="textutil" name="Text Manipulation">
+    <tool file="filters/fixedValueColumn.xml" />
+    <tool file="filters/catWrapper.xml" />
+    <tool file="filters/cutWrapper.xml" />
+    <tool file="filters/mergeCols.xml" />
+    <tool file="filters/convert_characters.xml" />
+    <tool file="filters/CreateInterval.xml" />
+    <tool file="filters/cutWrapper.xml" />
+    <tool file="filters/changeCase.xml" />
+    <tool file="filters/pasteWrapper.xml" />
+    <tool file="filters/remove_beginning.xml" />
+    <tool file="filters/randomlines.xml" />
+    <tool file="filters/headWrapper.xml" />
+    <tool file="filters/tailWrapper.xml" />
+    <tool file="filters/trimmer.xml" />
+    <tool file="filters/wc_gnu.xml" />
+    <tool file="filters/secure_hash_message_digest.xml" />
+  </section>
+  <section id="collection_operations" name="Collection Operations">
+    <tool file="${model_tools_path}/unzip_collection.xml" />
+    <tool file="${model_tools_path}/zip_collection.xml" />
+    <tool file="${model_tools_path}/filter_failed_collection.xml" />
+    <tool file="${model_tools_path}/flatten_collection.xml" />
+    <tool file="${model_tools_path}/merge_collection.xml" />
+    <tool file="${model_tools_path}/relabel_from_file.xml" />
+    <tool file="${model_tools_path}/filter_from_file.xml" />
+    <tool file="${model_tools_path}/sort_collection_list.xml" />
+  </section>
+  <section id="filter" name="Filter and Sort">
+    <tool file="stats/filtering.xml" />
+    <tool file="filters/sorter.xml" />
+    <tool file="filters/grep.xml" />
+    
+    <label id="gff" text="GFF" />
+    <tool file="filters/gff/extract_GFF_Features.xml" />
+    <tool file="filters/gff/gff_filter_by_attribute.xml" />
+    <tool file="filters/gff/gff_filter_by_feature_count.xml" />
+    <tool file="filters/gff/gtf_filter_by_attribute_values_list.xml" />
+  </section>
+  <section id="group" name="Join, Subtract and Group">
+    <tool file="filters/joiner.xml" />
+    <tool file="filters/compare.xml" />
+    <tool file="stats/grouping.xml" />
+  </section>
+  <section id="uniqprimer" name="Uniqprimer">
+    <tool file="uniqprimer/uniqprimer.xml" />
+  </section>
+<!--
+  <section id="features" name="Extract Features">
+    <tool file="filters/ucsc_gene_bed_to_exon_bed.xml" />
+  </section>
+  <section id="fetchSeq" name="Fetch Sequences">
+    <tool file="extract/extract_genomic_dna.xml" />
+  </section>
+  <section id="fetchAlign" name="Fetch Alignments">
+    <tool file="maf/interval2maf_pairwise.xml" />
+    <tool file="maf/interval2maf.xml" />
+    <tool file="maf/maf_split_by_species.xml" />
+    <tool file="maf/interval_maf_to_merged_fasta.xml" />
+    <tool file="maf/genebed_maf_to_fasta.xml" />
+    <tool file="maf/maf_stats.xml" />
+    <tool file="maf/maf_thread_for_species.xml" />
+    <tool file="maf/maf_limit_to_species.xml" />
+    <tool file="maf/maf_limit_size.xml" />
+    <tool file="maf/maf_by_block_number.xml" />
+    <tool file="maf/maf_reverse_complement.xml" />
+    <tool file="maf/maf_filter.xml" />
+  </section>-->
+  <section id="stats" name="Statistics">
+    <tool file="stats/gsummary.xml" />
+    <tool file="filters/uniq.xml" />
+  </section>
+  <section id="plots" name="Graph/Display Data">
+    <tool file="plotting/bar_chart.xml" />
+    <tool file="plotting/boxplot.xml" />
+    <tool file="maf/vcf_to_maf_customtrack.xml" />
+    <tool file="intreegreat/InTreeGreat.xml" />
+    <tool file="circosjs/circosjs.xml" />
+    <tool file="visualization/InteractiveScatter/InteractiveScatter.xml" />
+    <tool file="visualization/InteractiveScatter/InteractiveScatter2.xml" />
+    <tool file="visualization/InteractiveHistograms.xml" />
+  </section>
+  <section id="VCF_intersect" name="VCF intersect">
+    <tool file="vcf_intersect/VCFintersect.xml" />
+  </section>
+
+<!-- <label id="eib" text="Excellence in Breeding" />
+ <section id="eib-tools" name="Hackathon Tools ">
+    <label id="gh1" text="GH1: R Tools"/>
+    <tool file="gh1_tools/HelloWorldR.xml"/>
+    <tool file="tools/HelloWorldCpp.xml"/>
+    <tool file="gh1_tools/GreetingsR.xml"/>
+    <tool file="gh1_tools/GreetingsCpp.xml"/>
+    <tool file="gh1_tools/RCBD.xml"/>
+    <tool file="gh1_tools/PCAR.xml"/>
+    <tool file="gh1_tools/PCAeigen.xml"/>
+    <tool file="gh1_tools/PCAgsl.xml"/>
+    <tool file="gh1_tools/PCAarma.xml"/>
+    <tool file="gh1_tools/PCAstr.xml"/>
+    <tool file="gh1_tools/Sum2Ints.xml"/>
+    <tool file="gh1_tools/getARM.xml"/>
+    <tool file="gh1_tools/getGenosTextBin.xml"/>
+    <tool file="gh1_tools/recodeGenosTextBin.xml"/>
+    <tool file="gh1_tools/cleanImpute.xml"/>
+    <tool file="gh1_tools/fitLM.xml"/>
+    <tool file="gh1_tools/ReactionNorm.xml"/>
+    <tool file="gh1_tools/pedigreeRelationship.xml"/>
+    <tool file="gh1_tools/sampleCDmean.xml"/>
+    <tool file="gh1_tools/CVST.xml"/>
+    <label id="gh5" text="GH5: Finding Duplicates"/>
+    <tool file="ts_tools/FindDuplicates.xml" />
+  </section>
+-->
+<!--  <label id="htpg" text="HTPG Tools" /> -->
+  <section id="htpg-tools-pre-genotyping" name="Pre-genotyping">
+    <tool file="HTPGTools/HTPG_UID_Generator/HTPG_UID_Generator.xml"  />
+    <tool file="HTPGTools/simple_UID_generator/UID_generator.xml"  />
+    <tool file="simpletracker/simpletracker.xml"/>
+  </section>
+  <section id="htpg-tools-post-genotyping" name="Post-genotyping">
+   <tool file="HTPGTools/intertek-Fj_v1/Intertek-Fj_converter.xml"/>
+   <tool file="HTPGTools/excel-txt_extractor/excel-txt_extractor.xml"/>
+   <tool file="HTPGTools/csv-txt_converter/csv-txt_converter.xml"/>
+  </section>
+<!--
+  <label id="gobii" text="GOBII Tools" version=""/>
+  <section id="gobii-fj" name="Flapjack Tools" version="">
+  </section>
+-->
+</toolbox>
